@@ -48,9 +48,7 @@ public class TaskTest {
 		tasks.add(new Task("Task 19","Description 19", LocalDateTime.now().plusDays(100).toString()));
 		tasks.add(new Task("Task 20","Description 20", LocalDateTime.now().plusDays(350).toString()));
 
-		for (Task task : tasks) {
-			taskController.addTask(task);
-		}
+		tasks.forEach(task -> taskController.addTask(task));
 	}
 
 
